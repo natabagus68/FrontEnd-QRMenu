@@ -103,12 +103,14 @@ export const SideBarComponent = ({ open, closeDrawer }) => {
                     Items
                   </ListItem>
                 </NavLink>
-                <ListItem>
-                  <ListItemPrefix>
-                    <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
-                  </ListItemPrefix>
-                  Categories
-                </ListItem>
+                <NavLink to={"/admin/product/category"}>
+                  <ListItem>
+                    <ListItemPrefix>
+                      <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                    </ListItemPrefix>
+                    Categories
+                  </ListItem>
+                </NavLink>
               </List>
             </AccordionBody>
           </Accordion>
@@ -120,21 +122,23 @@ export const SideBarComponent = ({ open, closeDrawer }) => {
               Tables
             </ListItem>
           </NavLink>
-          <ListItem>
-            <ListItemPrefix>
-              <Computer size={20} />
-            </ListItemPrefix>
-            Orders
-            <ListItemSuffix>
-              <Chip
-                value="14"
-                size="sm"
-                variant="ghost"
-                color="green"
-                className="rounded-full"
-              />
-            </ListItemSuffix>
-          </ListItem>
+          <NavLink to={"/admin/order"}>
+            <ListItem>
+              <ListItemPrefix>
+                <Computer size={20} />
+              </ListItemPrefix>
+              Orders
+              <ListItemSuffix>
+                <Chip
+                  value="14"
+                  size="sm"
+                  variant="ghost"
+                  color="green"
+                  className="rounded-full"
+                />
+              </ListItemSuffix>
+            </ListItem>
+          </NavLink>
         </List>
       </Drawer>
     </React.Fragment>
