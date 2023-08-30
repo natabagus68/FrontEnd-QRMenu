@@ -18,7 +18,7 @@ export const ItemView = () => {
         <div className="w-full p-3 flex items-center justify-between bg-[#F0F1F3] border-y-2 border-[#E7EAEE]">
           <div className="w-80 bg-white rounded-lg">
             <Input
-              label="Search Table"
+              label="Search product"
               size="lg"
               crossOrigin={undefined}
               color="blue"

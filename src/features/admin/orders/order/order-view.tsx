@@ -1,9 +1,8 @@
-import { Pagination } from "@common/components/Pagination";
 import { ButtonEdit } from "@common/components/buttons/button-edit";
 import { ButtonPrint } from "@common/components/buttons/button-print";
 import { ButtonTrash } from "@common/components/buttons/button-trash";
 import { Button, Chip, Input } from "@material-tailwind/react";
-import { Plus, Search } from "lucide-react";
+import { BellDot, Plus, Search } from "lucide-react";
 import { useOrderModel } from "./order-view-model";
 
 export const OrderView = () => {
@@ -12,16 +11,23 @@ export const OrderView = () => {
     <>
       <div className="w-full border border-[#afb3b6] rounded-md py-2 shadow-lg">
         <div className="py-4 px-8">
-          <h1 className="text-[#404446] text-[24px] font-bold flex items-center gap-4">
-            Orders
-            <Chip
-              value="1"
-              size="lg"
-              variant="ghost"
-              color="green"
-              className="rounded-full"
-            />
-          </h1>
+          <div className="flex gap-3 items-center">
+            <h1 className="text-[#404446] text-[24px] font-bold flex items-center gap-4">
+              Orders
+              <Chip
+                value={1}
+                size="lg"
+                variant="ghost"
+                color="green"
+                className="rounded-full"
+              />
+            </h1>
+
+            <p className="text-sm flex items-center gap-1">
+              <BellDot size={17} color="green" />
+              Online orders...
+            </p>
+          </div>
         </div>
         <div className="w-full p-3 flex items-center justify-between bg-[#F0F1F3] border-y-2 border-[#E7EAEE]">
           <div className="w-80 bg-white rounded-lg">
@@ -52,9 +58,7 @@ export const OrderView = () => {
                 table
               </td>
               <td className="p-4 font-bold text-[14px] text-[#404446]">date</td>
-              <td className="p-4 font-bold text-[14px] text-[#404446]">
-                cashier
-              </td>
+
               <td className="p-4 font-bold text-[14px] text-[#404446]">
                 total
               </td>
@@ -72,7 +76,6 @@ export const OrderView = () => {
               <td className="p-4 text-[14px] text-[#404446] ">
                 23/8/2023 09:58
               </td>
-              <td className="p-4 text-[14px] text-[#404446] ">Wahyu</td>
               <td className="p-4 text-[14px] text-[#404446] ">
                 Rp.40.000.000,00
               </td>
@@ -89,9 +92,6 @@ export const OrderView = () => {
             </tr>
           </tbody>
         </table>
-        <div className="flex items-center justify-end my-4 px-8">
-          <Pagination />
-        </div>
       </div>
     </>
   );

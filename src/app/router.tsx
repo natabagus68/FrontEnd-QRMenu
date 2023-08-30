@@ -1,5 +1,6 @@
 import { Error404 } from "@common/components/error";
 import { AdminLayoutView } from "@features/admin/admin-layout/admin-layout-view";
+import { DashboardView } from "@features/admin/dashboard/dashboard-view";
 import { OrderFormView } from "@features/admin/orders/form/order-form-view";
 import { OrderView } from "@features/admin/orders/order/order-view";
 import { CategoryView } from "@features/admin/products/categories/category/catergory-view";
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
     path: "admin",
     element: <AdminLayoutView />,
     children: [
+      {
+        path: "dashboard",
+        element: <DashboardView />,
+      },
       {
         path: "product",
         element: <Root />,
