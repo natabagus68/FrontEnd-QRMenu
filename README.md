@@ -1,27 +1,74 @@
-# React + TypeScript + Vite
+# Web Admin QRMenu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is React.js + Typescript QRMenu Admin
 
-Currently, two official plugins are available:
+## Library use
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Vite.js + React.js + Typescript
+- React Router V6
+- TailwindCss + Material UI
+- Datepicker react tailwind
+- select2 react
+- uid
+- chartjs
 
-## Expanding the ESLint configuration
+## How to start
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone this repo
+2. Install Yarn if doesnt exist
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```
+npm i -g yarn
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Run this command inside root folder for install node depedencies
+
+```
+yarn
+```
+
+4. Run this command after installing depedencies to start development
+
+```
+yarn dev
+```
+
+## Folder Structure
+
+```
+root
+|   public
+|
++ src
+|   + app
+|   |   - router.jsx
+|   |
+|   + assets
+|   |   - index.css
+|   |
+|   + common
+|   |   + component
+|   |   + utils
+|   |
+|   + data
+|   |   - _api.ts
+|   + domain
+|   |   + model
+|   |   + repository
+|   |
+|   + features
+|   + landing-page
+|   - main.jsx
+|
+- .editorconfig
+- .env
+- .eslintrc.cjs
+- index.html
+- package.json
+- postcss.config.cgs
+- README.md
+- tsconfig.json
+- tsconfig-node.json
+- tailwind.config.cjs
+- vite.config.js
+```
